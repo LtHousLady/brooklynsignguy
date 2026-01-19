@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Beginning Sign Design Consulting | 40 Years of Expertise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #ff6b35;
+            --secondary: #ffd700;
+            --light: #f4f4f4;
+            --medium: #666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 107, 53, 0.03) 2px, rgba(255, 107, 53, 0.03) 4px),
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 215, 0, 0.03) 2px, rgba(255, 215, 0, 0.03) 4px);
+            animation: gridPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes gridPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 1200px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 8vw, 7rem);
+            color: var(--light);
+            letter-spacing: 0.05em;
+            line-height: 0.95;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+            animation: expandLine 1.2s ease-out 0.3s backwards;
+        }
+
+        @keyframes expandLine {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .tagline {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            color: var(--secondary);
+            font-weight: 300;
+            margin: 2rem 0;
+            animation: fadeInUp 1s ease-out 0.3s backwards;
+        }
+
+        .experience-badge {
+            display: inline-block;
+            background: rgba(255, 107, 53, 0.1);
+            border: 2px solid var(--accent);
+            padding: 1.5rem 3rem;
+            margin: 2rem 0;
+            border-radius: 2px;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
+
+        .experience-badge .years {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .experience-badge .text {
+            color: var(--light);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .cta-buttons {
+            margin-top: 3rem;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.9s backwards;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            border: 2px solid var(--accent);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--secondary);
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .btn-primary:hover::before {
+            left: 0;
+        }
+
+        .btn-primary:hover {
+            color: var(--primary);
+            border-color: var(--secondary);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--light);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light);
+            color: var(--primary);
+        }
+
+        .services {
+            padding: 6rem 2rem;
+            background: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            text-align: center;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--medium);
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255, 107, 53, 0.05), transparent);
+            transition: width 0.4s ease;
+            z-index: 0;
+        }
+
+        .service-card:hover::before {
+            width: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateX(10px);
+            box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            letter-spacing: 0.05em;
+            position: relative;
+        }
+
+        .service-card p {
+            color: var(--medium);
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .expertise {
+            padding: 6rem 2rem;
+            background: var(--primary);
+            color: var(--light);
+        }
+
+        .expertise-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: var(--light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .industries {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .industry-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+
+        .tag {
+            padding: 0.8rem 1.5rem;
+            background: var(--light);
+            border: 2px solid var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .contact {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, #2a2a2a 100%);
+            color: var(--light);
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: var(--secondary);
+        }
+
+        .contact-info {
+            margin: 3rem 0;
+            font-size: 1.2rem;
+        }
+
+        .contact-info a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--secondary);
+        }
+
+        footer {
+            background: #0a0a0a;
+            color: var(--medium);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>New Beginning<br>Sign Design<br>Consulting</h1>
+            <p class="tagline">Expert Commercial & Industrial Sign Design Since 1985</p>
+            
+            <div class="experience-badge">
+                <div class="years">40</div>
+                <div class="text">Years of Excellence</div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get Consultation</a>
+                <a href="#services" class="btn btn-secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <p class="section-subtitle">Comprehensive sign design and consulting services backed by decades of hands-on manufacturing experience from Paul Signs in Brooklyn, NY</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Commercial Sign Design</h3>
+                    <p>Custom signage solutions for retail, hospitality, and commercial spaces. From concept to detailed manufacturing specs.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Industrial Signage</h3>
+                    <p>Safety, wayfinding, and regulatory signage for manufacturing facilities, warehouses, and industrial complexes.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Design Consultation</h3>
+                    <p>Expert guidance on materials, fabrication methods, code compliance, and cost optimization for sign projects.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Sign Shop Support</h3>
+                    <p>Technical expertise for other sign manufacturers needing specialized design input or production problem-solving.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Virtual Design Services</h3>
+                    <p>Remote design development, 3D renderings, technical drawings, and manufacturing documentation.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Project Feasibility Analysis</h3>
+                    <p>Assess project viability, material selection, structural requirements, and installation considerations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="expertise">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--light);">Proven Track Record</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Four decades of hands-on experience from Paul Signs' inception to present day</p>
+            
+            <div class="stat-grid">
+                <div class="stat">
+                    <div class="stat-number">40</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Brooklyn Made</div>
+                </div>
+            </div>
+
+            <div class="expertise-content" style="margin-top: 4rem; text-align: center;">
+                <p style="font-size: 1.1rem; line-height: 1.9; color: rgba(255,255,255,0.85);">
+                    With nearly 40 years at Paul Signs in Brooklyn, NY, we bring unmatched expertise in commercial and industrial sign manufacturing. From initial concept through fabrication, installation, and compliance, we understand every aspect of the sign-making process. Now offering virtual consulting to help clients and sign shops nationwide benefit from our decades of specialized knowledge.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="industries">
+        <div class="container">
+            <h2 class="section-title">Industries Served</h2>
+            <p class="section-subtitle">Extensive experience across diverse commercial and industrial sectors</p>
+            
+            <div class="industry-tags">
+                <span class="tag">Retail</span>
+                <span class="tag">Hospitality</span>
+                <span class="tag">Healthcare</span>
+                <span class="tag">Manufacturing</span>
+                <span class="tag">Warehousing</span>
+                <span class="tag">Corporate</span>
+                <span class="tag">Education</span>
+                <span class="tag">Transportation</span>
+                <span class="tag">Real Estate</span>
+                <span class="tag">Restaurant</span>
+                <span class="tag">Municipal</span>
+                <span class="tag">Industrial Parks</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Start Your Project</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Ready to bring 40 years of sign expertise to your next project?</p>
+                
+                <div class="contact-info">
+                    <p style="margin-bottom: 1.5rem;">Get in touch for a consultation:</p>
+                    <p><a href="mailto:info@newbeginningsigndesign.com">info@newbeginningsigndesign.com</a></p>
+                    <p style="margin-top: 1rem;"><a href="tel:+15551234567">(555) 123-4567</a></p>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="mailto:info@newbeginningsigndesign.com" class="btn btn-primary">Email Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 New Beginning Sign Design Consulting. Serving clients nationwide with Brooklyn-made expertise.</p>
+    </footer>
+</body>
+</html>

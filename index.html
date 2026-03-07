@@ -1,9 +1,12 @@
+Index · HTML
+Copy
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Beginning Sign Design Consulting | 40 Years of Expertise</title>
+    <title>Brooklyn Sign Guy | Nearly 40 Years of Commercial & Industrial Sign Expertise</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -161,6 +164,7 @@
             position: relative;
             overflow: hidden;
             font-family: 'Work Sans', sans-serif;
+            display: inline-block;
         }
 
         .btn-primary {
@@ -201,9 +205,9 @@
             color: var(--primary);
         }
 
-        .services {
+        .portfolio {
             padding: 6rem 2rem;
-            background: var(--light);
+            background: white;
         }
 
         .container {
@@ -226,6 +230,66 @@
             max-width: 700px;
             margin: 0 auto 4rem;
             font-size: 1.1rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 2rem 1.5rem 1.5rem;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-caption {
+            transform: translateY(0);
+        }
+
+        .portfolio-caption h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-caption p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .services {
+            padding: 6rem 2rem;
+            background: var(--light);
         }
 
         .services-grid {
@@ -392,6 +456,10 @@
                 font-size: 3rem;
             }
 
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
             .services-grid {
                 grid-template-columns: 1fr;
             }
@@ -414,17 +482,106 @@
 <body>
     <section class="hero">
         <div class="hero-content">
-            <h1>New Beginning<br>Sign Design<br>Consulting</h1>
-            <p class="tagline">Expert Commercial & Industrial Sign Design Since 1985</p>
+            <h1>Brooklyn<br>Sign Guy</h1>
+            <p class="tagline">Expert Commercial & Industrial Sign Design Since 1987</p>
             
             <div class="experience-badge">
-                <div class="years">40</div>
+                <div class="years">Nearly 40</div>
                 <div class="text">Years of Excellence</div>
             </div>
 
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">Get Consultation</a>
-                <a href="#services" class="btn btn-secondary">View Services</a>
+                <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <p class="section-subtitle">Nearly 40 years of commercial and industrial sign expertise across every application</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="images/metro.jpg" alt="MetroPCS Illuminated Channel Letters" loading="lazy">
+                    <div class="portfolio-caption">
+                        <h3>MetroPCS</h3>
+                        <p>Custom illuminated channel letters with halo lighting</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/vestibule.jpg" alt="Commercial Vestibule Entrance" loading="lazy">
+                    <div class="portfolio-caption">
+                        <h3>Storefront Integration</h3>
+                        <p>Complete vestibule entrance design and fabrication</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/winter-wolf.jpg" alt="Winter Wolf Large Format Sign" loading="lazy">
+                    <div class="portfolio-caption">
+                        <h3>Winter Wolf</h3>
+                        <p>Large-scale illuminated signage with professional installation</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/gamse.jpg" alt="Gamse Auto Body Vertical Sign" loading="lazy">
+                    <div class="portfolio-caption">
+                        <h3>Gamse Auto Body</h3>
+                        <p>Vertical neon/LED column sign for maximum visibility</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/advance.jpg" alt="Advance Auto Parts Building Sign" loading="lazy">
+                    <div class="portfolio-caption">
+                        <h3>Advance Auto Parts</h3>
+                        <p>Dimensional letters with channel raceway system</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/channel-letters.jpg" alt="Channel Letter Installation" loading="lazy">
+                    <div class="portfolio-caption">
+                        <h3>Channel Letter Detail</h3>
+                        <p>Precision upright installation and wiring</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/fratelli.jpg" alt="Fratelli Ravioli Blade Sign" loading="lazy">
+                    <div class="portfolio-caption">
+                        <h3>Fratelli Ravioli</h3>
+                        <p>Vertical blade sign with custom awning integration</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/fulton.jpg" alt="Fulton Ale House Complete Storefront" loading="lazy">
+                    <div class="portfolio-caption">
+                        <h3>Fulton Ale House</h3>
+                        <p>Complete storefront package with branded awning</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/medical.jpg" alt="Medical Office Dimensional Letters" loading="lazy">
+                    <div class="portfolio-caption">
+                        <h3>Medical Office</h3>
+                        <p>Clean halo-lit dimensional letters for professional appearance</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/awning.jpg" alt="Custom Fabric Awning" loading="lazy">
+                    <div class="portfolio-caption">
+                        <h3>Custom Awnings</h3>
+                        <p>Fabric and aluminum awnings with integrated branding</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -432,7 +589,7 @@
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title">Services</h2>
-            <p class="section-subtitle">Comprehensive sign design and consulting services backed by decades of hands-on manufacturing experience from Paul Signs in Brooklyn, NY</p>
+            <p class="section-subtitle">Comprehensive sign design and consulting services backed by decades of hands-on Brooklyn manufacturing experience</p>
             
             <div class="services-grid">
                 <div class="service-card">
@@ -471,11 +628,11 @@
     <section class="expertise">
         <div class="container">
             <h2 class="section-title" style="color: var(--light);">Proven Track Record</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Four decades of hands-on experience from Paul Signs' inception to present day</p>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Nearly four decades of hands-on Brooklyn sign manufacturing experience</p>
             
             <div class="stat-grid">
                 <div class="stat">
-                    <div class="stat-number">40</div>
+                    <div class="stat-number">Nearly 40</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
                 <div class="stat">
@@ -490,7 +647,7 @@
 
             <div class="expertise-content" style="margin-top: 4rem; text-align: center;">
                 <p style="font-size: 1.1rem; line-height: 1.9; color: rgba(255,255,255,0.85);">
-                    With nearly 40 years at Paul Signs in Brooklyn, NY, we bring unmatched expertise in commercial and industrial sign manufacturing. From initial concept through fabrication, installation, and compliance, we understand every aspect of the sign-making process. Now offering virtual consulting to help clients and sign shops nationwide benefit from our decades of specialized knowledge.
+                    With nearly 40 years of experience in Brooklyn's sign manufacturing industry, we bring unmatched expertise in commercial and industrial signage. From initial concept through fabrication, installation, and compliance, we understand every aspect of the sign-making process. Now offering virtual consulting to help clients and sign shops nationwide benefit from our decades of specialized knowledge.
                 </p>
             </div>
         </div>
@@ -522,23 +679,25 @@
         <div class="container">
             <div class="contact-content">
                 <h2 class="section-title">Start Your Project</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Ready to bring 40 years of sign expertise to your next project?</p>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Ready to bring nearly 40 years of sign expertise to your next project?</p>
                 
                 <div class="contact-info">
                     <p style="margin-bottom: 1.5rem;">Get in touch for a consultation:</p>
-                    <p><a href="mailto:info@newbeginningsigndesign.com">info@newbeginningsigndesign.com</a></p>
-                    <p style="margin-top: 1rem;"><a href="tel:+15551234567">(555) 123-4567</a></p>
+                    <p><a href="mailto:jeff@thebrooklynsignguy.com">jeff@thebrooklynsignguy.com</a></p>
+                    <p style="margin-top: 1rem;"><a href="tel:+16318778640">(631) 877-8640</a></p>
+                    <p style="margin-top: 1.5rem; font-size: 1rem; color: rgba(255,255,255,0.6);">thebrooklynsignguy.com</p>
                 </div>
 
                 <div class="cta-buttons">
-                    <a href="mailto:info@newbeginningsigndesign.com" class="btn btn-primary">Email Us</a>
+                    <a href="mailto:jeff@thebrooklynsignguy.com" class="btn btn-primary">Email Us</a>
+                    <a href="tel:+16318778640" class="btn btn-secondary">Call Now</a>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 New Beginning Sign Design Consulting. Serving clients nationwide with Brooklyn-made expertise.</p>
+        <p>&copy; 2025 Brooklyn Sign Guy. Serving clients nationwide with Brooklyn-made expertise.</p>
     </footer>
 </body>
 </html>
